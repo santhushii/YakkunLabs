@@ -1,11 +1,78 @@
-/* Global Styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Styles */
+/* === Custom Styles === */
+
+/* Apply a smooth transition to all elements */
+* {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1A1A1A; /* Dark mode background */
+}
+::-webkit-scrollbar-thumb {
+  background: #8A2BE2; /* Electric Purple */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6822b4; /* Darker purple on hover */
+}
+
+/* Body Styling */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #1A1A1A;
-  color: white;
+  @apply bg-[#1A1A1A] text-white font-sans;
+}
+
+/* Navbar Styling */
+nav {
+  @apply fixed w-full top-0 left-0 flex justify-between items-center p-6 bg-black bg-opacity-80 backdrop-blur-md z-50;
+}
+
+nav ul {
+  @apply flex gap-6 text-lg;
+}
+
+nav a {
+  @apply hover:text-[#FF8C00] transition-colors;
+}
+
+/* Buttons */
+button {
+  @apply px-8 py-4 rounded-lg text-lg shadow-lg font-bold uppercase;
+}
+
+button.bg-blue {
+  @apply bg-[#007BFF] hover:bg-[#0056b3];
+}
+
+button.bg-red {
+  @apply bg-[#FF2E2E] hover:bg-[#cc2222];
+}
+
+button.bg-purple {
+  @apply bg-[#8A2BE2] hover:bg-[#6822b4];
+}
+
+/* Featured Game Section */
+.featured-section {
+  @apply py-20 text-center bg-black bg-opacity-70;
+}
+
+.featured-section h2 {
+  @apply text-5xl font-bold text-[#FFD700]; /* Gold */
+}
+
+.featured-section p {
+  @apply mt-4 text-xl text-[#E0E0E0];
+}
+
+/* Footer */
+footer {
+  @apply py-10 text-center bg-gray-900 text-[#E0E0E0];
 }

@@ -1,4 +1,6 @@
 import React from "react";
+import "./globals.css";
+
 
 export const metadata = {
   title: "YakkunLabs – Crafting the Future of Gaming",
