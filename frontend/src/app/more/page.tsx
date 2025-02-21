@@ -19,10 +19,9 @@ export default function More() {
         <ul className="flex gap-6 text-lg">
           <li><a href="/" className="hover:text-[#FF8C00]">Home</a></li>
           <li><a href="/lore" className="hover:text-[#FF8C00]">Lore</a></li>
-          <li><a href="#" className="hover:text-[#FF8C00]">Developer Diaries</a></li>
-          <li><a href="#" className="hover:text-[#FF8C00]">Game Expansions</a></li>
-          <li><a href="#" className="hover:text-[#FF8C00]">Merch Sneak Peeks</a></li>
-          <li><a href="#" className="hover:text-[#FF8C00]">Easter Eggs</a></li>
+          <li><a href="#" className="hover:text-[#FF8C00]">Explore</a></li>
+          <li><a href="#" className="hover:text-[#FF8C00]">Features</a></li>
+          <li><a href="#" className="hover:text-[#FF8C00]">Updates</a></li>
         </ul>
       </nav>
 
@@ -38,8 +37,8 @@ export default function More() {
           >
             Discover More
           </motion.h1>
-          <p className="mt-4 text-3xl text-[#1A1A1A]">
-            Stay updated with the latest features, developer insights, and hidden in-game content.
+          <p className="mt-4 text-3xl text-[#E0E0E0]">
+            Stay updated with the latest features, updates, and community insights.
           </p>
         </div>
         
@@ -69,7 +68,7 @@ export default function More() {
       >
         <h2 className="text-5xl font-bold text-[#FFD700]">Stay Updated</h2>
         <p className="mt-4 text-xl text-[#E0E0E0]">
-          Get insights into our development journey, upcoming expansions, and exclusive in-game content.
+          Be the first to know about our latest features and upcoming updates.
         </p>
         <button className="mt-6 bg-[#283593] hover:bg-[#1A237E] px-8 py-4 rounded-lg text-lg shadow-lg">
           Learn More
