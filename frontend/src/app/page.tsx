@@ -20,9 +20,9 @@ export default function Home() {
           <li><a href="#" className="hover:text-[#FF8C00]">Home</a></li>
           <li><a href="/lore" className="hover:text-[#FF8C00]">Lore</a></li> 
           <li><a href="/more" className="hover:text-[#FF8C00]">More</a></li>
-          <li><a href="#" className="hover:text-[#FF8C00]">Social</a></li>
-          <li><a href="#" className="hover:text-[#FF8C00]">Buy</a></li>
-          <li><a href="#" className="hover:text-[#FF8C00]">Login</a></li>
+          <li><a href="/social" className="hover:text-[#FF8C00]">Social</a></li>
+          <li><a href="/buy" className="hover:text-[#FF8C00]">Buy</a></li>
+          <li><a href="login" className="hover:text-[#FF8C00]">Login</a></li>
         </ul>
       </nav>
 
