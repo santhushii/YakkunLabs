@@ -52,12 +52,6 @@ npm run dev
 
 The website will be accessible at **http://localhost:3000**.
 
-## 🖼 Screenshots
-- **Home Page**
-- **Lore Page**
-- **Buy Page**
-- **Login Page**
-
 ## ✨ Technologies Used
 - **Next.js 15** – Fast & scalable React framework
 - **Tailwind CSS** – Modern styling with utility-first approach
@@ -88,4 +82,12 @@ If you encounter issues, try the following:
    npm run dev
    ```
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> f7e05f335e8d26fa380c9c7516d1c0f9af3a70fc
 
