@@ -32,13 +32,19 @@ To run this project locally, follow these steps:
 
 ```sh
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/YakkunLabs.git
+git clone https://github.com/santhushii/YakkunLabs.git
 
 # Navigate to the project folder
-cd YakkunLabs
+cd YakkunLabs/frontend
 
-# Install dependencies
+# Install dependencies (including Tailwind CSS)
 npm install
+
+# Initialize Tailwind CSS (if not already set up)
+npx tailwindcss init -p
+
+# Build the project
+npm run build
 
 # Start the development server
 npm run dev
@@ -46,20 +52,39 @@ npm run dev
 
 The website will be accessible at **http://localhost:3000**.
 
-## 🖼 Screenshots
-- **Home Page**
-- **Lore Page**
-- **Buy Page**
-- **Login Page**
-
 ## ✨ Technologies Used
 - **Next.js 15** – Fast & scalable React framework
 - **Tailwind CSS** – Modern styling with utility-first approach
 - **Framer Motion** – Smooth animations and interactive elements
 - **TypeScript** – Strongly typed JavaScript for better maintainability
 
-## 💡 Future Enhancements
-- **User Profiles** – Personalized dashboards for logged-in users
-- **Leaderboard System** – Track top players and community rankings
-- **Game API Integration** – Fetch real-time game updates and statistics
+## 🔧 Troubleshooting
+If you encounter issues, try the following:
+1. **Clear Next.js cache:**
+   ```sh
+   rmdir /s /q .next  # Windows
+   rm -rf .next  # Mac/Linux
+   ```
+2. **Ensure Tailwind CSS is installed:**
+   ```sh
+   npm install -D tailwindcss postcss autoprefixer
+   ```
+3. **Make sure `tailwind.config.js` is correctly configured:**
+   ```js
+   module.exports = {
+     content: ["./src/**/*.{js,ts,jsx,tsx}"],
+     theme: { extend: {} },
+     plugins: [],
+   };
+   ```
+4. **Restart the server:**
+   ```sh
+   npm run dev
+   ```
+
+
+
+
+
+
 
