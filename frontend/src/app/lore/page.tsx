@@ -4,9 +4,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/navigation"; // Import Next.js router
 import "../globals.css"; 
 
 export default function Lore() {
+  const router = useRouter(); // Initialize Next.js router
+
   return (
     <div className="bg-gradient-to-r from-[#E3F2FD] via-[#64B5F6] to-[#283593] text-white min-h-screen">
       <Head>
@@ -14,14 +17,13 @@ export default function Lore() {
       </Head>
 
       {/* Navbar */}
-      <nav className="fixed w-full top-0 left-0 flex justify-between items-center p-6 bg-[#64B5F6] bg-opacity-95 backdrop-blur-md">
+      <nav className="fixed w-full top-0 left-0 flex justify-between items-center p-6 bg-[#64B5F6] bg-opacity-95 backdrop-blur-md z-50">
         <h1 className="text-4xl font-extrabold text-[#FFD700]">YakkunLabs - LORE</h1>
         <ul className="flex gap-6 text-lg">
           <li><a href="/" className="hover:text-[#FF8C00]">Home</a></li>
-          <li><a href="#" className="hover:text-[#FF8C00]">Explore</a></li>
-          <li><a href="#" className="hover:text-[#FF8C00]">Characters</a></li>
-          <li><a href="#" className="hover:text-[#FF8C00]">Cutscenes</a></li>
-          <li><a href="#" className="hover:text-[#FF8C00]">More</a></li>
+          <li><a href="/explore" className="hover:text-[#FF8C00]">Explore</a></li>
+          <li><a href="/more" className="hover:text-[#FF8C00]">More</a></li>
+          <li><a href="/social" className="hover:text-[#FF8C00]">Community</a></li>
         </ul>
       </nav>
 
@@ -52,7 +54,7 @@ export default function Lore() {
           <Image
             src="/images/img_02.png"
             alt="Lore Concept Art"
-            width={850}
+            width={800}
             height={500}
             className="rounded-lg shadow-lg opacity-90 object-contain"
           />
@@ -70,7 +72,10 @@ export default function Lore() {
         <p className="mt-4 text-xl text-[#E0E0E0]">
           Discover hidden lore, explore cutscenes, and learn about your favorite characters.
         </p>
-        <button className="mt-6 bg-[#283593] hover:bg-[#1A237E] px-8 py-4 rounded-lg text-lg shadow-lg">
+        <button
+          className="mt-6 bg-[#283593] hover:bg-[#1A237E] px-8 py-4 rounded-lg text-lg shadow-lg"
+          onClick={() => router.push("/explore")}
+        >
           Explore More
         </button>
       </motion.section>
