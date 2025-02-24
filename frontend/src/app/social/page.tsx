@@ -4,9 +4,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/navigation"; // Import Next.js router
 import "../globals.css"; 
 
 export default function Social() {
+  const router = useRouter(); // Initialize router
+
   return (
     <div className="bg-gradient-to-r from-[#F0F4FF] via-[#6EC6FF] to-[#1E3A8A] text-white min-h-screen">
       <Head>
@@ -27,11 +30,8 @@ export default function Social() {
 
       {/* Hero Section */}
       <section className="flex flex-row items-center justify-between h-screen px-16 relative">
-        {/* Background Blur Effect */}
-        <div className="absolute inset-0 bg-black opacity-20 z-0"></div>
-
         {/* Left Side - Text Content */}
-        <div className="w-1/2 text-left relative z-10">
+        <div className="w-1/2 text-left">
           <motion.h1
             className="text-6xl font-extrabold drop-shadow-lg text-[#FFD700]"
             initial={{ opacity: 0, y: -50 }}
@@ -43,11 +43,19 @@ export default function Social() {
           <p className="mt-4 text-2xl text-white font-semibold">
             Join the YakkunLabs Community and be part of something bigger.
           </p>
+
+          {/* Navigate to Community Page Button */}
+          <button
+            onClick={() => router.push("/community")}
+            className="mt-6 bg-[#FFD700] hover:bg-[#E0C200] text-black px-6 py-3 rounded-lg text-lg shadow-lg"
+          >
+            Join the Community 🚀
+          </button>
         </div>
         
         {/* Right Side - Animated Character */}
         <motion.div 
-          className="w-1/3 flex justify-end relative z-10"
+          className="w-1/3 flex justify-end"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
@@ -66,7 +74,7 @@ export default function Social() {
       <section className="py-20 text-center bg-[#1E3A8A] bg-opacity-85">
         <h2 className="text-4xl font-bold text-[#FFD700]">Join Our Active Community</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 px-16">
-          {/* Interactive Community Features */}
+          {/* Community Features */}
           <motion.div 
             className="p-6 bg-[#6EC6FF] rounded-lg shadow-lg"
             whileHover={{ scale: 1.05 }}
@@ -122,7 +130,7 @@ export default function Social() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
       >
-        <h2 className="text-4xl font-bold text-[#FFD700]">Join the YakkunLabs Community</h2>
+        <h2 className="text-4xl font-bold text-[#FFD700]">Be a Part of the YakkunLabs Community</h2>
         <p className="mt-4 text-lg text-[#E0E0E0]">
           Connect with other players, discuss game strategies, and stay updated on live events.
         </p>
