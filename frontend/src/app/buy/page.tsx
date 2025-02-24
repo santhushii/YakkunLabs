@@ -37,7 +37,7 @@ export default function Buy() {
           >
             Buy & Marketplace
           </motion.h1>
-          <p className="mt-4 text-3xl text-[#E0E0E0]">
+          <p className="mt-4 text-3xl text-[#1A1A1A]">
             Purchase game content, merchandise, and exclusive limited edition items.
           </p>
         </div>

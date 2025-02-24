@@ -37,7 +37,7 @@ export default function More() {
           >
             Discover More
           </motion.h1>
-          <p className="mt-4 text-3xl text-[#E0E0E0]">
+          <p className="mt-4 text-3xl text-[#1A1A1A]">
             Stay updated with the latest features, updates, and community insights.
           </p>
         </div>
