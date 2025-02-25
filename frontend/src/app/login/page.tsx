@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/navigation"; // Next.js Router
-import "../globals.css";
+import "../globals.css"; // Import global styles
 
 export default function Login() {
   const [loading, setLoading] = useState(false);
@@ -15,6 +15,8 @@ export default function Login() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
+      alert("Login Successful!");
+      router.push("/dashboard"); // Redirect to Dashboard after login
     }, 2000);
   };
 
@@ -22,7 +24,7 @@ export default function Login() {
     <div 
       className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
       style={{
-        backgroundImage: "url('/images/img_08.jpg')",
+        backgroundImage: "url('/images/img_08.jpg')", // Background Image
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -31,7 +33,7 @@ export default function Login() {
       <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md"></div>
 
       <Head>
-        <title>YakkunLabs – Login / User Profile</title>
+        <title>YakkunLabs – Login</title>
       </Head>
 
       {/* Login Box */}
@@ -51,11 +53,19 @@ export default function Login() {
           </div>
         ) : (
           <form className="mt-6">
-            <input type="email" placeholder="Email" className="w-full p-2 rounded-md text-black" />
-            <input type="password" placeholder="Password" className="w-full p-2 rounded-md mt-3 text-black" />
+            <input 
+              type="email" 
+              placeholder="Email" 
+              className="w-full p-2 rounded-md text-black focus:outline-none" 
+            />
+            <input 
+              type="password" 
+              placeholder="Password" 
+              className="w-full p-2 rounded-md mt-3 text-black focus:outline-none" 
+            />
             <button 
               type="button"
-              className="mt-4 w-full bg-[#FFD700] hover:bg-[#FFC107] text-black py-2 rounded-lg font-bold"
+              className="mt-4 w-full bg-[#FFD700] hover:bg-[#FFC107] text-black py-2 rounded-lg font-bold transition duration-300"
               onClick={handleLogin}
             >
               Login
@@ -63,8 +73,14 @@ export default function Login() {
           </form>
         )}
 
+        {/* Forgot Password & Register */}
         <p className="mt-3 text-sm">
-          <a href="#" className="text-[#90CAF9] hover:underline">Forgot Password?</a>
+          <a 
+            className="text-[#90CAF9] hover:underline cursor-pointer"
+            onClick={() => router.push("/forgot-password")}
+          >
+            Forgot Password?
+          </a>
         </p>
         <p className="mt-3 text-sm">
           New User?{" "}
@@ -77,11 +93,21 @@ export default function Login() {
         </p>
 
         {/* Social Login Buttons */}
-        <div className="mt-5 flex justify-center gap-3">
-          <button className="bg-[#DB4437] p-2 rounded-lg">Google</button>
-          <button className="bg-[#7289DA] p-2 rounded-lg">Discord</button>
-          <button className="bg-[#9146FF] p-2 rounded-lg">Twitch</button>
-          <button className="bg-[#0F90F3] p-2 rounded-lg">Steam</button>
+        <div className="mt-5 flex justify-center gap-4">
+          {/* Google Login */}
+          <button onClick={() => alert("Google Login Clicked")}>
+            <Image src="/images/google.png" alt="Google Login" width={50} height={50} className="cursor-pointer hover:scale-110 transition" />
+          </button>
+
+          {/* Discord Login */}
+          <button onClick={() => alert("Discord Login Clicked")}>
+            <Image src="/images/discord.png" alt="Discord Login" width={50} height={50} className="cursor-pointer hover:scale-110 transition" />
+          </button>
+
+          {/* Twitch Login */}
+          <button onClick={() => alert("Twitch Login Clicked")}>
+            <Image src="/images/twitch.png" alt="Twitch Login" width={50} height={50} className="cursor-pointer hover:scale-110 transition" />
+          </button>
         </div>
       </motion.div>
     </div>
